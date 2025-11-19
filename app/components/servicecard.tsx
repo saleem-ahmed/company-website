@@ -8,23 +8,48 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, description }) => {
   return (
-    <div className="group bg-white rounded-lg p-6 sm:p-7 md:p-8 shadow-sm hover:shadow-lg hover:border-blue-100 border border-transparent transition-all duration-300 h-full flex flex-col">
-      <div className="mb-4 flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 relative">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-contain group-hover:scale-110 transition-transform duration-300 w-[90px] h-[70px]"
-        />
+    <div className="group bg-white rounded-lg p-6 sm:p-7 md:p-8 shadow-sm hover:shadow-lg  transition-all duration-300 h-full flex flex-col relative overflow-hidden">
+      {/* Default State Content */}
+      <div className="relative z-0 flex flex-col h-full rounded-lg p-6 sm:p-7 md:p-8">
+        <div className="mb-4 flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 relative">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-contain group-hover:scale-110 transition-transform duration-300"
+          />
+        </div>
+
+        <h3 className="text-base sm:text-lg font-bold text-[#937C39] mb-2 sm:mb-3 leading-tight">
+          {title}
+        </h3>
+
+        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed flex-grow">
+          {description}
+        </p>
       </div>
 
-      <h3 className="text-base sm:text-lg font-bold text-[#937C39] mb-2 sm:mb-3 leading-tight">
-        {title}
-      </h3>
+      {/* Hover Overlay */}
+      <div className="absolute inset-0 bg-gray-700 opacity-0 group-hover:opacity-95 transition-opacity duration-300 rounded-lg z-10 flex flex-col justify-center items-start p-6 sm:p-7 md:p-8 pointer-events-none group-hover:pointer-events-auto">
+        <div className="hover:border-white border border-dashed border-transparent rounded-lg p-4 w-full h-full flex flex-col justify-center items-start">
+          <div className="mb-4 w-16 h-16 sm:w-20 sm:h-20 relative">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-contain brightness-0 invert opacity-70"
+            />
+          </div>
 
-      <p className="text-gray-600 text-xs sm:text-sm leading-relaxed flex-grow">
-        {description}
-      </p>
+          <h3 className="text-lg font-bold text-white mb-3 sm:mb-4">
+            {title}
+          </h3>
+
+          <p className="text-white text-sm leading-relaxed opacity-90">
+            {description}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

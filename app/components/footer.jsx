@@ -132,15 +132,15 @@ const Footer = () => {
 
           <motion.div variants={itemVariants}>
             <div className="relative mb-6">
-              <h3 className="text-xl font-bold mb-3">Quick Links</h3>
-              {/* <motion.div
-                className="h-1 bg-gradient-to-r from-blue-500 to-transparent"
+              <h3 className="relative text-xl font-bold mb-3 ">Quick Links</h3>
+              <motion.div
+                className="h-1 bg-gradient-to-r from-blue-500 to-transparent w-[72px]"
                 style={{ backgroundImage: 'repeating-linear-gradient(to right, #3B82F6 0px, #3B82F6 8px, transparent 8px, transparent 16px)' }}
                 variants={dashedLineVariants}
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
-              /> */}
+              />
             </div>
             <ul className="space-y-3">
               {['About Us', 'Our Services', 'Our Portfolio', 'Careers Page'].map((item) => (
@@ -162,14 +162,14 @@ const Footer = () => {
           <motion.div variants={itemVariants}>
             <div className="relative mb-6">
               <h3 className="text-xl font-bold mb-3">Our Services</h3>
-              {/* <motion.div
-                className="h-1 bg-gradient-to-r from-blue-500 to-transparent"
+               <motion.div
+                className="h-1 bg-gradient-to-r from-blue-500 to-transparent w-[72px]"
                 style={{ backgroundImage: 'repeating-linear-gradient(to right, #3B82F6 0px, #3B82F6 8px, transparent 8px, transparent 16px)' }}
                 variants={dashedLineVariants}
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
-              /> */}
+              />
             </div>
             <ul className="space-y-3">
               {['Web Design/Development', 'E-commerce Development', 'Mobile App Development', 'UI/UX Design / Branding', 'Staff Augmentation'].map((item) => (
@@ -192,7 +192,7 @@ const Footer = () => {
             <div className="relative mb-6">
               <h3 className="text-xl font-bold mb-3">Operating Hours</h3>
               <motion.div
-                className="h-1 bg-gradient-to-r from-blue-500 to-transparent"
+                className="h-1 bg-gradient-to-r from-blue-500 to-transparent w-[72px]"
                 style={{ backgroundImage: 'repeating-linear-gradient(to right, #3B82F6 0px, #3B82F6 8px, transparent 8px, transparent 16px)' }}
                 variants={dashedLineVariants}
                 initial="initial"
