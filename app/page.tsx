@@ -96,15 +96,18 @@ const ServicesPage = () => {
           <div className="max-w-7xl mx-auto ">
             {/* Section Header */}
             <motion.div
-               animate={{ 
-        y: [0, -12, 0],     // up → down → reset
-        scale: [1, 1.08, 1] // expand on bounce
-      }}
-      transition={{
-        duration: 1.2,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
+              animate={{
+                y: [0, -20, 0],
+                scaleY: [1, 1.1, 0.9, 1.05, 1],
+                scaleX: [1, 0.95, 1.05, 0.98, 1]
+              }}
+              transition={{
+                duration: 1.5,
+                times: [0, 0.4, 0.6, 0.8, 1],
+                repeat: Infinity,
+                repeatDelay: 1,
+                ease: "easeInOut"
+              }}
             >
               {/* Your content inside */}
               <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">

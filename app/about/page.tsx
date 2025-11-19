@@ -94,13 +94,17 @@ const AboutPage: React.FC = () => {
                     <div className="max-w-7xl mx-auto ">
                         {/* Section Header */}
                         <motion.div
-                            className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16"
-                            animate={{ y: [0, -15, 0] }}          // bounce keyframes
+                            animate={{
+                                y: [0, -20, 0],
+                                scaleY: [1, 1.1, 0.9, 1.05, 1],
+                                scaleX: [1, 0.95, 1.05, 0.98, 1]
+                            }}
                             transition={{
-                                duration: 1,
+                                duration: 1.5,
+                                times: [0, 0.4, 0.6, 0.8, 1],
                                 repeat: Infinity,
-                                repeatType: "loop",
-                                ease: "easeInOut",
+                                repeatDelay: 1,
+                                ease: "easeInOut"
                             }}
                         >
                             <div className="text-left mb-8 sm:mb-10 md:mb-12 lg:mb-16">
@@ -121,13 +125,17 @@ const AboutPage: React.FC = () => {
                     <div className="max-w-7xl mx-auto ">
                         {/* Section Header */}
                         <motion.div
-                            className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16"
-                            animate={{ y: [0, -15, 0] }}          // bounce keyframes
+                            animate={{
+                                y: [0, -20, 0],
+                                scaleY: [1, 1.1, 0.9, 1.05, 1],
+                                scaleX: [1, 0.95, 1.05, 0.98, 1]
+                            }}
                             transition={{
-                                duration: 1,
+                                duration: 1.5,
+                                times: [0, 0.4, 0.6, 0.8, 1],
                                 repeat: Infinity,
-                                repeatType: "loop",
-                                ease: "easeInOut",
+                                repeatDelay: 1,
+                                ease: "easeInOut"
                             }}
                         >
                             <div className="text-center mb-4 sm:mb-4 md:mb-5 lg:mb-6">

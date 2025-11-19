@@ -11,14 +11,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, description }) 
     <div className="group bg-white rounded-lg p-6 sm:p-7 md:p-8 shadow-sm hover:shadow-lg  transition-all duration-300 h-full flex flex-col relative overflow-hidden">
       {/* Default State Content */}
       <div className="relative z-0 flex flex-col h-full rounded-lg p-6 sm:p-7 md:p-8">
-        <div className="mb-4 flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 relative">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-contain group-hover:scale-110 transition-transform duration-300"
-          />
-        </div>
+        <div className="mb-4 w-16 h-16 sm:w-20 sm:h-20 relative">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-contain"
+            />
+          </div>
 
         <h3 className="text-base sm:text-lg font-bold text-[#937C39] mb-2 sm:mb-3 leading-tight">
           {title}
